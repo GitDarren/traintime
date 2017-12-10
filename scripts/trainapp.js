@@ -17,7 +17,7 @@ var database = firebase.database();
 var name = "";
 var dest = "";
 var timeFrequency = 0;
-var firstTime = 0;
+var firstTime = 0000;
 var timeRemainder = 0;
 
 
@@ -41,7 +41,7 @@ database.ref().orderByChild("inputDest").on("child_added", function (snapshot) {
     console.log("Minutes until the goddamn train: " + minutesAway);
 
     var nextArrival = moment().add(minutesAway, "minutes");
-    console.log("The fucking train will arrive at " + moment(nextArrival).format("hh:mm"));
+    console.log("The fucking train will arrive at " + moment(nextArrival).format("hhmm"));
 
     timeFrequency = snapshot.val().inputFreq;
     console.log("This is time frequency " + timeFrequency);
@@ -56,7 +56,7 @@ database.ref().orderByChild("inputDest").on("child_added", function (snapshot) {
         <td id="table-name">${snapshot.val().inputName}</td>
         <td id="table-dest">${snapshot.val().inputDest}</td>
         <td id="table-freq">${snapshot.val().inputFreq}</td>
-        <td id="table-nextarr">${moment(nextArrival).format("hh:mm")}</td>
+        <td id="table-nextarr">${moment(nextArrival).format("hhmm")}</td>
         <td id="table-minutes">${minutesAway}</td>
     </tr>`
     )
