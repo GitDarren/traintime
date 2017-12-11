@@ -14,14 +14,17 @@ console.log("This shit is working");
 
 var database = firebase.database();
 
-var name = "";
-var dest = "";
+
+// var name = "";
+// var dest = "";
+
+//Setting up global variables
 var timeFrequency = 0;
-var firstTime = 0000;
+var firstTime;
 var timeRemainder = 0;
 
 
-
+//Setting up database  
 database.ref().orderByChild("inputDest").on("child_added", function (snapshot) {
     console.log('here')
 
@@ -85,5 +88,7 @@ database.ref().orderByChild("inputDest").on("child_added", function (snapshot) {
         })
         $('input').val('');
     });
+
+
 
 
