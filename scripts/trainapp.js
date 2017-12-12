@@ -74,7 +74,6 @@ $("#submit").on("click", function (event) {
 
     console.log(inputName);
     console.log(inputDest);
-    console.log(inputFirstTrain);
     console.log(inputFreq);
 
     //Pushes the user input to Firebase//
@@ -87,6 +86,7 @@ $("#submit").on("click", function (event) {
     //Clears the form values for the next enty. 
     $('input').val('');
 });
+
 
     //Things to fix
     //2.  Fix the sorting function so that happens on submit, not on page fresh

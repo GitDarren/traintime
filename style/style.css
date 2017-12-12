@@ -1,3 +1,19 @@
 body    {
-    background-color: red;
+    background-color: rgb(150, 141, 141);
+}
+
+.jumbotron  {
+    background-color: rgb(30, 140, 173);
+    color: white;
+}
+
+.title  {
+    border-bottom:  solid 1px black;
+    padding: 2%;
+}
+
+#submit:hover {
+    background-color: lightblue;
+    box-shadow: 1px 1px 1px 1px rgba(4, 4, 4, .5);
+    color:  rgb(31, 30, 30);
 }
